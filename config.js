@@ -59,8 +59,8 @@ var config = {
     authorizationKey: '',
   },
   fiatRateServiceOpts: {
-    defaultProvider: 'BitPay',
-    fetchInterval: 60, // in minutes
+    defaultProvider: 'coinmarketcap',
+    fetchInterval: 15, // in minutes
   },
   // To use email notifications uncomment this:
   // emailOpts: {
