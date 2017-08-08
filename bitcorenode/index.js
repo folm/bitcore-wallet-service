@@ -96,7 +96,7 @@ Service.prototype._getConfiguration = function() {
       testnet: providerOptions
     };
   } else {
-    throw new Error('Unknown network: ' + self.node.network);
+    throw new Error('Unknown network: ' + self.node.network + ' ' + Networks.livenet);
   }
 
   return baseConfig;
