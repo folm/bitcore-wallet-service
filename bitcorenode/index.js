@@ -84,23 +84,10 @@ Service.prototype._getConfiguration = function() {
     apiPrefix: '/insight-api'
   };
 
-  // A bitcore-node is either livenet or testnet, so we'll pass
-  // the configuration options to communicate via the local running
-  // instance of the insight-api service.
-  console.log('is livenet? ' + self.node.network === Networks.livenet)
-  console.log('-' + self.node.network + '-')
-  console.log('-' + Networks.livenet + '-')
-  if (self.node.network === Networks.livenet) {
-    baseConfig.blockchainExplorerOpts = {
-      livenet: providerOptions
-    };
-  } else if (self.node.network === Networks.testnet) {
-    baseConfig.blockchainExplorerOpts = {
-      testnet: providerOptions
-    };
-  } else {
-    throw new Error('Unknown network: ' + self.node.network + ' ' + Networks.livenet);
-  }
+  // NavCoin works always in mainnet
+  baseConfig.blockchainExplorerOpts = {
+    livenet: providerOptions
+  };
 
   return baseConfig;
 
