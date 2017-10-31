@@ -80,7 +80,7 @@ Service.prototype._getConfiguration = function() {
 
   var providerOptions = {
     provider: 'insight',
-    url: (self.node.https ? 'https://' : 'http://') + (self.node.https ? 'navpay.navcoin.org:' : 'localhost') + self.node.port,
+    url: (self.node.https ? 'https://' : 'http://') + (self.node.https ? 'navpay.navcoin.org:' : 'localhost:') + self.node.port,
     apiPrefix: '/insight-api'
   };
 
